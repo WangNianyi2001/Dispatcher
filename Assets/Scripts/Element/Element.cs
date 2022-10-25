@@ -1,13 +1,14 @@
 ﻿using NaughtyAttributes;
+using System;
 using TMPro;
 using UnityEngine;
 
 namespace Game {
 	[RequireComponent(typeof(Interactable))]
 	public class Element : MonoBehaviour {
-		Interactable interactable;
-		Canvas canvas;
-		TMP_Text label;
+		[NonSerialized] public Interactable interactable;
+		protected Canvas canvas;
+		protected TMP_Text label;
 
 		[SerializeField, Label("Label Text")]
 		protected string initLabelText = "Element";
