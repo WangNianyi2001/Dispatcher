@@ -1,8 +1,6 @@
 using System;
-using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static UnityEditor.Rendering.FilterWindow;
 
 namespace Game {
 	[RequireComponent(typeof(PlayerInput))]
@@ -52,12 +50,12 @@ namespace Game {
 		[Header("Interaction")]
 		public Transform holdAnchor;
 		[NonSerialized] public HoldableElement holding;
-		struct LousyTransform {
+		public struct LousyTransform {
 			public Transform parent;
 			public Vector3 position;
 			public Quaternion rotation;
 		}
-		LousyTransform original;
+		public LousyTransform original;
 
 		public void Interact(Element element) {
 			if(holding) {

@@ -10,4 +10,8 @@ namespace Game {
 	[Serializable]
 	public class ColliderEvent : UnityEvent<Collider> {
 	}
+
+	[Serializable]
+	public class TargetElementEvent : UnityEvent<TargetElement> {
+	}
 }
