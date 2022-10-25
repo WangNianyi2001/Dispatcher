@@ -1,6 +1,6 @@
 /Library
 /Logs
-/Objects
+/obj
 /LocalPackages
 /Logs
 /Packages
@@ -9,3 +9,4 @@
 
 /.vsconfig
 /*.sln
+/.vs
