@@ -56,15 +56,18 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Modules\GameManager.cs" />
-    <Compile Include="Assets\Modules\Interaction\CameraSelector.cs" />
-    <Compile Include="Assets\Modules\Interaction\Events.cs" />
-    <Compile Include="Assets\Modules\Interaction\Interactable.cs" />
-    <Compile Include="Assets\Modules\Interaction\Trigger.cs" />
-    <Compile Include="Assets\Modules\Interaction\Usable.cs" />
-    <Compile Include="Assets\Modules\Player\Player.cs" />
-    <Compile Include="Assets\Modules\Player\Protagonist.cs" />
-    <Compile Include="Assets\Modules\Presenting\Billboard.cs" />
+    <Compile Include="Assets\Scripts\Billboard.cs" />
+    <Compile Include="Assets\Scripts\Element\Element.cs" />
+    <Compile Include="Assets\Scripts\Element\HoldableElement.cs" />
+    <Compile Include="Assets\Scripts\Element\InstantElement.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Interaction\CameraSelector.cs" />
+    <Compile Include="Assets\Scripts\Interaction\Events.cs" />
+    <Compile Include="Assets\Scripts\Interaction\Interactable.cs" />
+    <Compile Include="Assets\Scripts\Interaction\Trigger.cs" />
+    <Compile Include="Assets\Scripts\Interaction\Usable.cs" />
+    <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Player\Protagonist.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -680,10 +683,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime.csproj">
-      <Project>{E3DF7468-F403-AF07-D47A-F1EC97A0A964}</Project>
-      <Name>Unity.RenderPipelines.HighDefinition.Config.Runtime</Name>
-    </ProjectReference>
     <ProjectReference Include="NaughtyAttributes.Editor.csproj">
       <Project>{F06684F4-08B3-1291-9AEE-35A247E1E007}</Project>
       <Name>NaughtyAttributes.Editor</Name>
@@ -691,6 +690,10 @@
     <ProjectReference Include="NaughtyAttributes.Core.csproj">
       <Project>{73DE05C3-6706-28C4-4B67-D5C2499CAF9B}</Project>
       <Name>NaughtyAttributes.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime.csproj">
+      <Project>{E3DF7468-F403-AF07-D47A-F1EC97A0A964}</Project>
+      <Name>Unity.RenderPipelines.HighDefinition.Config.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

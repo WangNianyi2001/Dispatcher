@@ -2,7 +2,10 @@ fileFormatVersion: 2
 guid: 0ad717fd56dea3442bc16beaaece4ac6
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -1449237224515336204
+    second: envelope4_open|envelope4_openAction
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -81,7 +84,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 3
+    globalScale: 0.03
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

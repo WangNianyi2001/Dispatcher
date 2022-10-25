@@ -18,6 +18,8 @@ namespace Game {
 		}
 
 		public void OnInteract(Component source) {
+			if(!isActiveAndEnabled)
+				return;
 			onInteract.Invoke(source);
 		}
 	}
