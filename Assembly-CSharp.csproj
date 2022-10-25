@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\Element\Element.cs" />
     <Compile Include="Assets\Scripts\Element\HoldableElement.cs" />
     <Compile Include="Assets\Scripts\Element\InstantElement.cs" />
+    <Compile Include="Assets\Scripts\Element\TargetElement.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Interaction\CameraSelector.cs" />
     <Compile Include="Assets\Scripts\Interaction\Events.cs" />
