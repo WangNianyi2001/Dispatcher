@@ -120,8 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e530d28e6ab111046971ae813ec58c11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 200
-  orientingSpeed: 7.45
+  movementSpeed: 120
+  orientingSpeed: 5
   pitchRange: {x: -60, y: 60}
   holdAnchor: {fileID: 6872566811057035822}
 --- !u!1 &3215353861493200610
