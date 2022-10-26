@@ -56,19 +56,19 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Billboard.cs" />
-    <Compile Include="Assets\Scripts\Element\Element.cs" />
-    <Compile Include="Assets\Scripts\Element\HoldableElement.cs" />
-    <Compile Include="Assets\Scripts\Element\InstantElement.cs" />
-    <Compile Include="Assets\Scripts\Element\TargetElement.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Interaction\CameraSelector.cs" />
-    <Compile Include="Assets\Scripts\Interaction\Events.cs" />
-    <Compile Include="Assets\Scripts\Interaction\Interactable.cs" />
-    <Compile Include="Assets\Scripts\Interaction\Trigger.cs" />
-    <Compile Include="Assets\Scripts\Interaction\Usable.cs" />
-    <Compile Include="Assets\Scripts\Player\Player.cs" />
-    <Compile Include="Assets\Scripts\Player\Protagonist.cs" />
+    <Compile Include="Assets\Modules\Billboard.cs" />
+    <Compile Include="Assets\Modules\Element\Element.cs" />
+    <Compile Include="Assets\Modules\Element\HoldableElement.cs" />
+    <Compile Include="Assets\Modules\Element\InstantElement.cs" />
+    <Compile Include="Assets\Modules\Element\TargetElement.cs" />
+    <Compile Include="Assets\Modules\GameManager.cs" />
+    <Compile Include="Assets\Modules\Interaction\CameraSelector.cs" />
+    <Compile Include="Assets\Modules\Interaction\Events.cs" />
+    <Compile Include="Assets\Modules\Interaction\Interactable.cs" />
+    <Compile Include="Assets\Modules\Interaction\Trigger.cs" />
+    <Compile Include="Assets\Modules\Interaction\Usable.cs" />
+    <Compile Include="Assets\Modules\Player\Player.cs" />
+    <Compile Include="Assets\Modules\Player\Protagonist.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
