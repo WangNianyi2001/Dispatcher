@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using NaughtyAttributes;
+using UnityEngine.UI;
+using System.Linq;
 
 namespace Game {
 	public class GameManager : MonoBehaviour {
@@ -12,11 +14,6 @@ namespace Game {
 
 		#region Inspector fields
 		public MailSequencer sequencer;
-		[Serializable] public struct ReputationRecord {
-			public Force force;
-			public float reputation;
-		}
-		[SerializeField, ReorderableList] List<ReputationRecord> reputations;
 
 		[Serializable] public struct Resources {
 			public GameObject envelopePrefab;
@@ -29,7 +26,7 @@ namespace Game {
 			[NonSerialized] public HoldableElement[] tools;
 			public TargetElement envelopeAnchor;
 			[ReorderableList, NonSerialized] public Mailbox[] mailBoxes;
-			public ContentUI letterUI, promptUI, newsUI;
+			public ContentUI letterUI, promptUI, newsUI, startupUI;
 			public ReputationUI reputationUI;
 		}
 		public Elements elements;
@@ -49,7 +46,17 @@ namespace Game {
 			dispatched = next;
 		}
 
-		void GameOver() { }
+		void GameOver(bool good) {
+			elements.letterUI.GetComponentInChildren<Button>().onClick.AddListener(() => Application.Quit());
+			if(!good) {
+				var complainers = sequencer.reputations.Where(r => r.reputation <= 0).Select(r => Constant.forceNames[r.force]);
+				elements.letterUI.Show($"你的信件分拣员生涯，因受到${string.Join("、", complainers)}势力的投诉过多而被迫结束。");
+			}
+			else {
+				var force = sequencer.choice;
+				elements.letterUI.Show(sequencer.goodEndings.Find(r => r.force == force).mail.content);
+			}
+		}
 		#endregion
 
 		#region Public interfaces
@@ -60,11 +67,9 @@ namespace Game {
 		public void AddReputation(Force force, float reputation) {
 			if(force == Force.DontCare)
 				return;
-			var record = reputations.Find(r => r.force == force);
+			var record = sequencer.reputations.Find(r => r.force == force);
 			record.reputation += reputation;
 			elements.reputationUI.Set(record.force, record.reputation);
-			if(reputation <= 0)
-				GameOver();
 		}
 		public void UpdateReputation() {
 			foreach(var f in new Force[] { Force.Gang, Force.Capital, Force.Police, Force.Worker })
@@ -79,7 +84,7 @@ namespace Game {
 			if(!dispatched) {
 				DispatchMail();
 				if(!dispatched) {
-					Prompt("没有更多信件了。");
+					GameOver(true);
 					return;
 				}
 			}
@@ -114,6 +119,8 @@ namespace Game {
 				foreach(var res in rep.responses)
 					AddReputation(res.effectOn, res.reputation);
 			}
+			if(sequencer.reputations.Any(r => r.reputation <= 0))
+				GameOver(false);
 
 			fetched = null;
 			Destroy(envelope.gameObject);
@@ -168,6 +175,8 @@ namespace Game {
 
 		#region Life cycle
 		void Start() {
+			sequencer.Reset();
+			UpdateReputation();
 			elements.tools = new HoldableElement[] {
 				elements.knife,
 				elements.glue,
@@ -183,8 +192,7 @@ namespace Game {
 				});
 			}
 			elements.mailBoxes = FindObjectsOfType<Mailbox>();
-			sequencer.Reset();
-			UpdateReputation();
+			elements.startupUI.Show();
 		}
 		#endregion
 	}

@@ -9,7 +9,7 @@ namespace Game {
 
 	public static class Constant {
 		public static Dictionary<Force, string> forceNames = new Dictionary<Force, string> {
-			{ Force.DontCare, "随便" },
+			{ Force.DontCare, "无关" },
 			{ Force.Gang, "黑帮" },
 			{ Force.Capital, "资本" },
 			{ Force.Police, "警局" },

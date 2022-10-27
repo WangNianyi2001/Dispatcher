@@ -9,10 +9,14 @@ namespace Game {
 			set => text.text = value;
 		}
 
-		public void Show(string text) {
-			Text = text;
+		public void Show() {
 			gameObject.SetActive(true);
 			GameManager.instance.EnterUI();
+		}
+
+		public void Show(string text) {
+			Text = text;
+			Show();
 		}
 
 		public void Quit() {

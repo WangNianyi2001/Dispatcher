@@ -112,8 +112,6 @@ namespace Game {
 			camera = GetComponentInChildren<Camera>();
 			camera.tag = "MainCamera";
 			selector = GetComponentInChildren<CameraSelector>();
-
-			Input = true;
 		}
 
 		bool input = true;
