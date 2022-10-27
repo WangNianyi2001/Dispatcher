@@ -10,14 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f7408f0d68301443a23f9cbc5f22ef3, type: 3}
-  m_Name: New General Mail
+  m_Name: General11
   m_EditorClassIdentifier: 
-  from: 0
-  to: 0
+  from: 4
+  to: 3
   sealing: 0
-  content: Hello hello hello
+  content: "\u55EF\uFF0C\u6211\u56DE\u6765\u4E86\uFF0C\u7238\u7238\u3002\r\n\u7231\u60A8\u7684\u51EF\u745F\u7433\r"
   responsePairs:
-  - sendTo: 0
+  - sendTo: 3
+    responses:
+    - effectOn: 3
+      reputation: 15
+  - sendTo: 2
     responses:
     - effectOn: 2
-      reputation: 10
+      reputation: 0
+  - sendTo: 4
+    responses:
+    - effectOn: 4
+      reputation: 0
+  - sendTo: 1
+    responses:
+    - effectOn: 1
+      reputation: 0

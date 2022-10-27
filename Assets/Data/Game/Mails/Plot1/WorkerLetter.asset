@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f75fd622ea09004ab39f18616b77b24, type: 3}
+  m_Name: WorkerLetter
+  m_EditorClassIdentifier: 
+  from: 4
+  to: 1
+  sealing: 0
+  content: "\u4EB2\u7231\u7684\u8F9B\u514B\u83B1\uFF1A\r\n\u5C55\u4FE1\u4F73\u3002\r\n\u6211\u4ECA\u5929\u770B\u5230\u82AC\u5F7B\u5947\u8857\u90A3\u8FB9\u51FA\u4E86\u65B0\u7684\u4EBA\u5458\u8C03\u52A8\u540D\u5355\uFF0C\u4F60\u597D\u50CF\u8981\u88AB\u8C03\u5230\u767D\u6559\u5802\u533A\u5DE5\u4F5C\uFF1F\r\n\u5982\u679C\u4F60\u7684\u624B\u4F24\u8FD8\u6CA1\u597D\u7684\u8BDD\uFF0C\u53EF\u4EE5\u6765\u5723\u5409\u5C14\u65AF\u8857\u627E\u6211\uFF0C\u8FD9\u8FB9\u6709\u4ED6\u4EEC\u65B0\u5EFA\u7ACB\u8D77\u6765\u7684\u4E00\u4E2A\u201C\u5DE5\u4EBA\u4E92\u52A9\u4F1A\u201D\u3002\u6211\u56E0\u4E3A\u8BFB\u8FC7\u4E00\u4E9B\u4E66\uFF0C\u4E5F\u88AB\u62DB\u5230\u4E86\u8FD9\u4E2A\u7EC4\u7EC7\u91CC\u9762\uFF0C\u4F60\u9700\u8981\u7684\u836F\u7269\u8FD9\u91CC\u8FD8\u6709\u4E00\u4E9B\uFF0C\u5E94\u8BE5\u80FD\u591F\u5E2E\u5230\u4F60\u3002\r\n\u4F60\u5FE0\u8BDA\u7684\uFF1A\u6770\u514B\r\n"
+  responsePairs:
+  - sendTo: 4
+    responses:
+    - effectOn: 4
+      reputation: 15
+  - sendTo: 1
+    responses:
+    - effectOn: 4
+      reputation: -15
+  - sendTo: 2
+    responses:
+    - effectOn: 4
+      reputation: -15
+  - sendTo: 3
+    responses:
+    - effectOn: 4
+      reputation: -15
+  hasConsequence: 0
+  consequence: 
+  end: 0
+  endingRemarks: 
+  successors: []

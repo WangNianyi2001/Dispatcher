@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f75fd622ea09004ab39f18616b77b24, type: 3}
+  m_Name: WinsSmugglePolice
+  m_EditorClassIdentifier: 
+  from: 3
+  to: 2
+  sealing: 1
+  content: "\u542C\u8BF4\u4F60\u4EEC\u6574\u4E86\u4E00\u6279\u79C1\u9152\uFF1F\r\n\u7ED9\u6211\u4EEC\u5C40\u91CC\u6700\u68D2\u7684\u5C0F\u4F19\u5B50\u548C\u59D1\u5A18\u4EEC\u51C6\u5907\u4E00\u70B9\u5427\uFF0C\u6211\u4EEC\u4F1A\u4ED8\u51FA\u76F8\u5E94\u7684\u62A5\u916C\u7684\u3002\u89C4\u77E9\u6211\u4EEC\u4E5F\u61C2\uFF0C\u65F6\u95F4\u548C\u5730\u70B9\u90FD\u7531\u4F60\u4EEC\u5B9A\u3002\r\n\u4E3A\u4E86\u5C55\u793A\u8BDA\u610F\uFF0C\u8FD9\u5C01\u4FE1\u4E0A\u6807\u6CE8\u4E86\u53D1\u4FE1\u4EBA\u662F\u82CF\u683C\u5170\u573A\uFF0C\u5E0C\u671B\u6211\u4EEC\u80FD\u591F\u628A\u8FD9\u4EFD\u5FC3\u7167\u4E0D\u5BA3\u7684\u548C\u5E73\u4FDD\u6301\u4E0B\u53BB\u3002\r\n"
+  responsePairs:
+  - sendTo: 1
+    responses:
+    - effectOn: 3
+      reputation: 15
+  - sendTo: 2
+    responses:
+    - effectOn: 3
+      reputation: -15
+  - sendTo: 3
+    responses:
+    - effectOn: 3
+      reputation: -15
+  - sendTo: 4
+    responses:
+    - effectOn: 3
+      reputation: -15
+  hasConsequence: 0
+  consequence: 
+  end: 0
+  endingRemarks: 
+  successors: []
