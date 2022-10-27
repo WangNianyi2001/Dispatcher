@@ -29,8 +29,8 @@ namespace Game {
 			[NonSerialized] public HoldableElement[] tools;
 			public TargetElement envelopeAnchor;
 			[ReorderableList, NonSerialized] public Mailbox[] mailBoxes;
-			public ContentUI letterUI;
-			public ContentUI promptUI;
+			public ContentUI letterUI, promptUI, newsUI;
+			public ReputationUI reputationUI;
 		}
 		public Elements elements;
 		#endregion
@@ -39,19 +39,13 @@ namespace Game {
 		Mail dispatched, fetched;
 		Envelope envelope;
 		void DispatchMail() {
-			if(fetched) {
-				Prompt("A mail is already fetched. Skipping dispatching new mail.");
+			if(fetched)
 				return;
-			}
-			if(dispatched) {
-				Prompt("A mail is already dispatched. Skipping dispatching new mail.");
+			if(dispatched)
 				return;
-			}
 			Mail next = sequencer.Next();
-			if(!next) {
-				Prompt("No more mails can be dispatched.");
+			if(!next)
 				return;
-			}
 			dispatched = next;
 		}
 
@@ -64,25 +58,28 @@ namespace Game {
 		}
 
 		public void AddReputation(Force force, float reputation) {
-			if(force == Force.DontCare) {
-				Prompt("Adding reputation to Force.DontCare, skipping adding reputation.");
+			if(force == Force.DontCare)
 				return;
-			}
 			var record = reputations.Find(r => r.force == force);
 			record.reputation += reputation;
+			elements.reputationUI.Set(record.force, record.reputation);
 			if(reputation <= 0)
 				GameOver();
+		}
+		public void UpdateReputation() {
+			foreach(var f in new Force[] { Force.Gang, Force.Capital, Force.Police, Force.Worker })
+				AddReputation(f, 0);
 		}
 
 		public void FetchMail() {
 			if(fetched) {
-				Prompt("A mail is already fetched. Skipping fetching.");
+				Prompt("请先投递拿到的信件。");
 				return;
 			}
 			if(!dispatched) {
 				DispatchMail();
 				if(!dispatched) {
-					Prompt("No mail is dispatched, cannot fetch.");
+					Prompt("没有更多信件了。");
 					return;
 				}
 			}
@@ -94,17 +91,26 @@ namespace Game {
 			this.envelope.target.sources.AddRange(elements.tools);
 			this.envelope.Sealing = fetched.sealing;
 
-			Prompt($"Fetched {fetched}");
+			Prompt($"拿到了新信件。");
 		}
 		public void PostMail(Force force) {
 			if(!fetched) {
-				Prompt("No mail is fetched, cannot post.");
+				Prompt("没拿到信件，无法投递。");
 				return;
 			}
+
+			// Reputation
+			var rep = fetched.responsePairs.Find(r => r.sendTo == force) ?? fetched.responsePairs.Find(r => r.sendTo == Force.DontCare);
+			if(rep != null) {
+				foreach(var res in rep.responses)
+					AddReputation(res.effectOn, res.reputation);
+			}
+
 			fetched = null;
 			Destroy(envelope.gameObject);
 			envelope = null;
-			Prompt($"Posted mail to {force}");
+
+			Prompt($"投递到{Constant.forceNames[force]}");
 		}
 		public void PostMail(string forceName) => PostMail((Force)Enum.Parse(typeof(Force), forceName));
 
@@ -113,21 +119,21 @@ namespace Game {
 				return;
 			envelope.Open = true;
 			envelope.Sealing = SealingType.None;
-			Prompt("Cut open envelope.");
+			Prompt("用刀打开了信封。");
 		}
 		public void GlueEnvelope() {
 			if(!envelope)
 				return;
 			envelope.Open = false;
 			envelope.Sealing = SealingType.Glue;
-			Prompt("Glued envelope.");
+			Prompt("用胶水粘上了信封。");
 		}
 		public void WaxEnvelope() {
 			if(!envelope)
 				return;
 			envelope.Open = false;
 			envelope.Sealing = SealingType.Wax;
-			Prompt("Wax-sealed envelope.");
+			Prompt("用火漆封上了信封。");
 		}
 
 		public void EnterUI() {
@@ -169,6 +175,7 @@ namespace Game {
 			}
 			elements.mailBoxes = FindObjectsOfType<Mailbox>();
 			sequencer.Reset();
+			UpdateReputation();
 		}
 		#endregion
 	}

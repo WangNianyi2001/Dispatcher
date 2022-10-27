@@ -97,7 +97,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2c1e44e00c7546a4494857287907abd5, type: 2}
+      objectReference: {fileID: 2100000, guid: 50817f9e5a88d4f4ba644b158938c1cb, type: 2}
     - target: {fileID: 919132149155446097, guid: c38b6059bdaf5f743a72eebd365c7e9f,
         type: 3}
       propertyPath: m_Name
@@ -199,8 +199,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7583586107919650365, guid: e479be74215d4e542a1452fbfb734e3e,
         type: 3}
+      propertyPath: labelText
+      value: "\u5200"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7583586107919650365, guid: e479be74215d4e542a1452fbfb734e3e,
+        type: 3}
       propertyPath: initLabelText
       value: Knife
+      objectReference: {fileID: 0}
+    - target: {fileID: 7583586107919650365, guid: e479be74215d4e542a1452fbfb734e3e,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7583586107919650365, guid: e479be74215d4e542a1452fbfb734e3e,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7583586107919650365, guid: e479be74215d4e542a1452fbfb734e3e,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7583586107919650365, guid: e479be74215d4e542a1452fbfb734e3e,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CutOpenEnvelope
+      objectReference: {fileID: 0}
+    - target: {fileID: 7583586107919650365, guid: e479be74215d4e542a1452fbfb734e3e,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8100738194754979150, guid: e479be74215d4e542a1452fbfb734e3e,
         type: 3}

@@ -176,6 +176,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6010627303926304563, guid: eb6b08f35a819f348bc8f46485deb6bd,
         type: 3}
+      propertyPath: labelText
+      value: "\u5E8A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010627303926304563, guid: eb6b08f35a819f348bc8f46485deb6bd,
+        type: 3}
       propertyPath: initLabelText
       value: Bed
       objectReference: {fileID: 0}

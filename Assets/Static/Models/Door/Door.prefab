@@ -196,6 +196,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6010627303926304563, guid: eb6b08f35a819f348bc8f46485deb6bd,
         type: 3}
+      propertyPath: labelText
+      value: "\u83B7\u53D6\u65B0\u4FE1\u4EF6"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010627303926304563, guid: eb6b08f35a819f348bc8f46485deb6bd,
+        type: 3}
       propertyPath: initLabelText
       value: Fetch Mail
       objectReference: {fileID: 0}

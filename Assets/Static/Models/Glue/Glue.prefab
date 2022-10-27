@@ -23,7 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7117393599483315143}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -189,8 +189,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7583586107919650365, guid: e479be74215d4e542a1452fbfb734e3e,
         type: 3}
+      propertyPath: labelText
+      value: "\u80F6\u6C34"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7583586107919650365, guid: e479be74215d4e542a1452fbfb734e3e,
+        type: 3}
       propertyPath: initLabelText
       value: Glue
+      objectReference: {fileID: 0}
+    - target: {fileID: 7583586107919650365, guid: e479be74215d4e542a1452fbfb734e3e,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7583586107919650365, guid: e479be74215d4e542a1452fbfb734e3e,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7583586107919650365, guid: e479be74215d4e542a1452fbfb734e3e,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7583586107919650365, guid: e479be74215d4e542a1452fbfb734e3e,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GlueEnvelope
+      objectReference: {fileID: 0}
+    - target: {fileID: 7583586107919650365, guid: e479be74215d4e542a1452fbfb734e3e,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8100738194754979150, guid: e479be74215d4e542a1452fbfb734e3e,
         type: 3}

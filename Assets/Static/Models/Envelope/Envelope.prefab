@@ -403,7 +403,7 @@ PrefabInstance:
     - target: {fileID: 6010627303926304563, guid: eb6b08f35a819f348bc8f46485deb6bd,
         type: 3}
       propertyPath: labelText
-      value: Read mail
+      value: "\u9605\u8BFB\u4FE1\u4EF6"
       objectReference: {fileID: 0}
     - target: {fileID: 7615160268286759503, guid: eb6b08f35a819f348bc8f46485deb6bd,
         type: 3}
@@ -550,7 +550,7 @@ PrefabInstance:
     - target: {fileID: 2254893081820482837, guid: fde1afed761f4d7498c8e21af027c8b7,
         type: 3}
       propertyPath: labelText
-      value: Use
+      value: "\u4F7F\u7528"
       objectReference: {fileID: 0}
     - target: {fileID: 5647326450138089521, guid: fde1afed761f4d7498c8e21af027c8b7,
         type: 3}

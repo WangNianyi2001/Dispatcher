@@ -6,9 +6,7 @@ namespace Game {
 		public InstantElement element;
 
 		void Start() {
-			if(force == Force.DontCare)
-				Debug.LogWarning("Mailbox must have a force", this);
-			element.LabelText = $"Post to {force}";
+			element.LabelText = $"投递到{Constant.forceNames[force]}";
 			element.interactable.onInteract.AddListener(_ => GameManager.instance.PostMail(force));
 		}
 	}
