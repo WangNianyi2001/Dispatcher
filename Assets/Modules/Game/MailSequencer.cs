@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using NaughtyAttributes;
+using System;
+using Random = UnityEngine.Random;
 
 namespace Game {
 	[CreateAssetMenu]
@@ -8,9 +10,22 @@ namespace Game {
 		[ReorderableList] public List<GeneralMail> generalMails;
 		[ReorderableList] public List<PlotMail> plotEntries;
 
+		[NonSerialized] public Force choice;
+
 		IEnumerator<Mail> MakeMailSequence() {
-			foreach(Mail general in generalMails)
-				yield return general;
+			for(int i = 0; i < plotEntries.Count; ++i) {
+				for(var currentPlot = plotEntries[i]; ;) {
+					if(currentPlot == null)
+						break;
+					for(int generalCount = Random.Range(1, 3); generalCount > 0; --generalCount)
+						yield return generalMails[Random.Range(0, generalMails.Count - 1)];
+					choice = Force.DontCare;
+					yield return currentPlot;
+					if(currentPlot.end)
+						break;
+					currentPlot = currentPlot.successors.Find(s => s.force == choice)?.mail;
+				}
+			}
 			while(true)
 				yield return null;
 		}

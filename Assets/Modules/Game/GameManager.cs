@@ -99,6 +99,15 @@ namespace Game {
 				return;
 			}
 
+			sequencer.choice = force;
+
+			if(fetched is PlotMail) {
+				var plot = fetched as PlotMail;
+				// News
+				if(plot.hasConsequence)
+					elements.newsUI.Show(plot.consequence);
+			}
+
 			// Reputation
 			var rep = fetched.responsePairs.Find(r => r.sendTo == force) ?? fetched.responsePairs.Find(r => r.sendTo == Force.DontCare);
 			if(rep != null) {

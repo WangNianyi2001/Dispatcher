@@ -14,9 +14,9 @@ namespace Game {
 		[ShowIf("end"), ResizableTextArea] public string endingRemarks;
 
 		[Serializable]
-		public struct Successor {
+		public class Successor {
 			public Force force;
-			public Mail mail;
+			public PlotMail mail;
 		}
 		[HideIf("end"), ReorderableList] public List<Successor> successors;
 	}

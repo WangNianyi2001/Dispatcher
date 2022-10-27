@@ -17,10 +17,8 @@ MonoBehaviour:
   sealing: 2
   content: 
   responsePairs: []
-  hasConsequence: 0
-  consequence: 
-  end: 0
+  hasConsequence: 1
+  consequence: Aw no!
+  end: 1
   endingRemarks: 
-  successors:
-  - force: 0
-    mail: {fileID: 0}
+  successors: []
