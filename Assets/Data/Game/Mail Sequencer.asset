@@ -12,7 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e60aee0ada4006146980e3006c6030de, type: 3}
   m_Name: Mail Sequencer
   m_EditorClassIdentifier: 
+  reputations:
+  - force: 1
+    reputation: 10
+  - force: 2
+    reputation: 10
+  - force: 3
+    reputation: 10
+  - force: 4
+    reputation: 10
   generalMails:
   - {fileID: 11400000, guid: e2cbc9ed5b931c345895b5e2310ce5f7, type: 2}
   plotEntries:
   - {fileID: 11400000, guid: 636cdb681abc738478bc074d428bdcbb, type: 2}
+  goodEndings: []

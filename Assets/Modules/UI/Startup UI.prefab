@@ -604,7 +604,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u4F60\u597D\uFF01"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a3eec65c42e235746b21484b9c4702eb, type: 2}
   m_sharedMaterial: {fileID: -4255336937765920813, guid: a3eec65c42e235746b21484b9c4702eb,
