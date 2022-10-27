@@ -9,13 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b19e21584c9a5524382cdbb31c29cd74, type: 3}
-  m_Name: New Mail
+  m_Script: {fileID: 11500000, guid: 0f75fd622ea09004ab39f18616b77b24, type: 3}
+  m_Name: New Plot Mail
   m_EditorClassIdentifier: 
-  from: 0
-  to: 0
-  encryption: 0
+  from: 1
+  to: 3
+  sealing: 2
   content: 
   end: 0
   endingRemarks: 
-  precedingMails: []
+  successors:
+  - force: 0
+    mail: {fileID: 0}

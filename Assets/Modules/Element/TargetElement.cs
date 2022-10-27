@@ -1,13 +1,22 @@
 ﻿using UnityEngine;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace Game {
 	public class TargetElement : InstantElement {
+		public List<HoldableElement> sources;
+
 		HoldableElement selected;
 
 		public void Select() {
 			HoldableElement holding = Protagonist.instance.holding;
-			if(!holding || !holding.targets.Any(target => target == this))
+			if(!holding)
+				return;
+
+			if(!(
+				holding.targets.Any(target => target == this)
+				|| sources.Any(source => source == holding)
+			))
 				return;
 
 			selected = holding;

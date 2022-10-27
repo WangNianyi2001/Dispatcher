@@ -1,22 +1,17 @@
-﻿using NaughtyAttributes;
-using System;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 namespace Game {
 	[RequireComponent(typeof(Interactable))]
 	public class Element : MonoBehaviour {
-		[NonSerialized] public Interactable interactable;
-		protected Canvas canvas;
-		protected TMP_Text label;
+		public Interactable interactable;
+		public Canvas canvas;
+		public TMP_Text label;
 
-		[SerializeField, Label("Label Text")]
-		protected string initLabelText = "Element";
-		public virtual string LabelText {
-			set {
-				if(label)
-					label.text = value;
-			}
+		public string labelText = "Element";
+		public string LabelText {
+			get => label.text;
+			set => labelText = label.text = value;
 		}
 
 		public bool active = true;
@@ -27,16 +22,13 @@ namespace Game {
 			set {
 				active = value;
 				interactable.enabled = active;
+				interactable.user.enabled = active;
 				canvas.enabled = active;
 			}
 		}
 
 		protected virtual void Start() {
-			interactable = GetComponent<Interactable>();
-			canvas = GetComponentInChildren<Canvas>(true);
-			label = canvas.GetComponentInChildren<TMP_Text>();
-
-			LabelText = initLabelText;
+			LabelText = labelText;
 			Active = active;
 		}
 	}

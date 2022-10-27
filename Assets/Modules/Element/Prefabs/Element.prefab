@@ -354,6 +354,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 092767f74917c384d9bee51fcc79ea74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactable: {fileID: 2726030204071230913}
+  canvas: {fileID: 2781292336733402874}
+  label: {fileID: 5285341214693872154}
   initLabelText: Element
   active: 1
 --- !u!1 &5885328207657096771

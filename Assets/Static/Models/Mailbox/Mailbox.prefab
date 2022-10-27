@@ -90,6 +90,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2966852113776530845}
+  - component: {fileID: 7668776042130847380}
   m_Layer: 0
   m_Name: Mailbox
   m_TagString: Untagged
@@ -112,6 +113,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7668776042130847380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6022854483129778114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d8a976cb7b41649b63bc7201e37d89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 0
+  element: {fileID: 1463674088653507989}
 --- !u!1001 &291526686782646232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -213,6 +228,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Instant Element
       objectReference: {fileID: 0}
+    - target: {fileID: 6010627303926304563, guid: eb6b08f35a819f348bc8f46485deb6bd,
+        type: 3}
+      propertyPath: active
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7615160268286759503, guid: eb6b08f35a819f348bc8f46485deb6bd,
         type: 3}
       propertyPath: m_RootOrder
@@ -291,6 +311,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5132426252076466854}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1463674088653507989 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6010627303926304563, guid: eb6b08f35a819f348bc8f46485deb6bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 5132426252076466854}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7968edb26d5c85749b2dcfea9727f328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &740759517248442277 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5583828711565495555, guid: eb6b08f35a819f348bc8f46485deb6bd,
