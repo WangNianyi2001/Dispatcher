@@ -47,7 +47,7 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.15</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.16</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2019.4.40f1c2</UnityVersion>
@@ -61,7 +61,10 @@
     <Compile Include="Assets\Modules\Element\HoldableElement.cs" />
     <Compile Include="Assets\Modules\Element\InstantElement.cs" />
     <Compile Include="Assets\Modules\Element\TargetElement.cs" />
-    <Compile Include="Assets\Modules\GameManager.cs" />
+    <Compile Include="Assets\Modules\Game\Definitions.cs" />
+    <Compile Include="Assets\Modules\Game\Envelope.cs" />
+    <Compile Include="Assets\Modules\Game\GameManager.cs" />
+    <Compile Include="Assets\Modules\Game\Mail.cs" />
     <Compile Include="Assets\Modules\Interaction\CameraSelector.cs" />
     <Compile Include="Assets\Modules\Interaction\Events.cs" />
     <Compile Include="Assets\Modules\Interaction\Interactable.cs" />

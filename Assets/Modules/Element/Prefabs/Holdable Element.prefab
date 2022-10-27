@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58aa452eb5b89a04ea63e39fce130ecb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  label: {fileID: 0}
   initLabelText: Element
   active: 1
+  targets: []
+  onPlace:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &4748208874392392062
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55,7 +58,7 @@ PrefabInstance:
     - target: {fileID: 3570963798196704304, guid: 2330e41dae072ca439d256a3a075c5ec,
         type: 3}
       propertyPath: m_Name
-      value: Holdable Element Variant
+      value: Holdable Element
       objectReference: {fileID: 0}
     - target: {fileID: 6465487212471487390, guid: 2330e41dae072ca439d256a3a075c5ec,
         type: 3}
@@ -146,6 +149,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8647950190173874198, guid: 2330e41dae072ca439d256a3a075c5ec,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8647950190173874198, guid: 2330e41dae072ca439d256a3a075c5ec,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.35
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5092178098197543869, guid: 2330e41dae072ca439d256a3a075c5ec, type: 3}

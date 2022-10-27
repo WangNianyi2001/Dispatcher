@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2404133638798169788
 Transform:
@@ -119,7 +119,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\u76D1\u72F1\u95E8"
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f4ba3054e8e2580418fb3842471f1e5e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6615262328270703020, guid: f4ba3054e8e2580418fb3842471f1e5e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7111735894824290447, guid: f4ba3054e8e2580418fb3842471f1e5e,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -144,40 +154,40 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2404133638798169788}
     m_Modifications:
+    - target: {fileID: 2840056209829485986, guid: eb6b08f35a819f348bc8f46485deb6bd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3043198968606474771, guid: eb6b08f35a819f348bc8f46485deb6bd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3325072233446083139, guid: eb6b08f35a819f348bc8f46485deb6bd,
         type: 3}
       propertyPath: m_Size.x
-      value: 1.5
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 3325072233446083139, guid: eb6b08f35a819f348bc8f46485deb6bd,
         type: 3}
       propertyPath: m_Size.y
-      value: 2.75
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 3325072233446083139, guid: eb6b08f35a819f348bc8f46485deb6bd,
         type: 3}
       propertyPath: m_Size.z
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3325072233446083139, guid: eb6b08f35a819f348bc8f46485deb6bd,
-        type: 3}
-      propertyPath: m_Center.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3325072233446083139, guid: eb6b08f35a819f348bc8f46485deb6bd,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3325072233446083139, guid: eb6b08f35a819f348bc8f46485deb6bd,
-        type: 3}
-      propertyPath: m_Center.z
-      value: 0
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4364395938593692225, guid: eb6b08f35a819f348bc8f46485deb6bd,
         type: 3}
       propertyPath: m_Name
       value: Door Element
+      objectReference: {fileID: 0}
+    - target: {fileID: 4364395938593692225, guid: eb6b08f35a819f348bc8f46485deb6bd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5583828711565495555, guid: eb6b08f35a819f348bc8f46485deb6bd,
         type: 3}
@@ -187,7 +197,17 @@ PrefabInstance:
     - target: {fileID: 6010627303926304563, guid: eb6b08f35a819f348bc8f46485deb6bd,
         type: 3}
       propertyPath: initLabelText
-      value: Door
+      value: Fetch Mail
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679696479059138610, guid: eb6b08f35a819f348bc8f46485deb6bd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7090669934284401837, guid: eb6b08f35a819f348bc8f46485deb6bd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7615160268286759503, guid: eb6b08f35a819f348bc8f46485deb6bd,
         type: 3}
@@ -202,7 +222,7 @@ PrefabInstance:
     - target: {fileID: 7615160268286759503, guid: eb6b08f35a819f348bc8f46485deb6bd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 7615160268286759503, guid: eb6b08f35a819f348bc8f46485deb6bd,
         type: 3}
@@ -259,6 +279,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8438723967674902119, guid: eb6b08f35a819f348bc8f46485deb6bd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb6b08f35a819f348bc8f46485deb6bd, type: 3}
