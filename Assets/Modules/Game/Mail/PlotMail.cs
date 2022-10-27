@@ -6,6 +6,9 @@ using NaughtyAttributes;
 namespace Game {
 	[CreateAssetMenu(menuName = "Mail/Plot")]
 	public class PlotMail : Mail {
+		public bool hasConsequence;
+		[ShowIf("hasConsequence"), ResizableTextArea] public string consequence;
+
 		public bool end;
 
 		[ShowIf("end"), ResizableTextArea] public string endingRemarks;

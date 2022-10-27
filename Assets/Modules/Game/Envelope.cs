@@ -8,7 +8,7 @@ namespace Game {
 		[SerializeField] bool open;
 		[SerializeField] SealingType sealing;
 
-		public HoldableElement holdable;
+		public InstantElement instant;
 		public TargetElement target;
 
 		void UpdateAppearance() {
@@ -29,6 +29,10 @@ namespace Game {
 				sealing = value;
 				UpdateAppearance();
 			}
+		}
+
+		public void Inspect() {
+			GameManager.instance.Inspect();
 		}
 
 		void Start() {

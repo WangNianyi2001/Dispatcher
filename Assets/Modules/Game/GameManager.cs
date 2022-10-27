@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using NaughtyAttributes;
-using System.Linq;
-using System.Collections;
 
 namespace Game {
 	public class GameManager : MonoBehaviour {
@@ -31,6 +29,8 @@ namespace Game {
 			[NonSerialized] public HoldableElement[] tools;
 			public TargetElement envelopeAnchor;
 			[ReorderableList, NonSerialized] public Mailbox[] mailBoxes;
+			public ContentUI letterUI;
+			public ContentUI promptUI;
 		}
 		public Elements elements;
 		#endregion
@@ -40,47 +40,32 @@ namespace Game {
 		Envelope envelope;
 		void DispatchMail() {
 			if(fetched) {
-				Debug.LogWarning("A mail is already fetched. Skipping dispatching new mail.");
+				Prompt("A mail is already fetched. Skipping dispatching new mail.");
 				return;
 			}
 			if(dispatched) {
-				Debug.LogWarning("A mail is already dispatched. Skipping dispatching new mail.");
+				Prompt("A mail is already dispatched. Skipping dispatching new mail.");
 				return;
 			}
 			Mail next = sequencer.Next();
 			if(!next) {
-				Debug.LogWarning("No more mails can be dispatched.");
+				Prompt("No more mails can be dispatched.");
 				return;
 			}
 			dispatched = next;
-		}
-		bool HoldingEnvelope {
-			set {
-				elements.door.Active = !value;
-				foreach(var box in elements.mailBoxes)
-					box.element.Active = value;
-			}
-		}
-		IEnumerator HoldEnvelope(Envelope envelope) {
-			this.envelope = envelope;
-
-			envelope.holdable.targets.AddRange(elements.mailBoxes.Select(mailBox => mailBox.element));
-			envelope.holdable.interactable.onInteract.AddListener(_ => HoldingEnvelope = true);
-			envelope.holdable.onPlace.AddListener(_ => HoldingEnvelope = false);
-
-			envelope.target.sources.AddRange(elements.tools);
-
-			yield return new WaitForEndOfFrame();
-			envelope.holdable.Hold();
 		}
 
 		void GameOver() { }
 		#endregion
 
 		#region Public interfaces
+		public void Prompt(string msg) {
+			elements.promptUI.Text = msg;
+		}
+
 		public void AddReputation(Force force, float reputation) {
 			if(force == Force.DontCare) {
-				Debug.LogWarning("Adding reputation to Force.DontCare, skipping adding reputation.");
+				Prompt("Adding reputation to Force.DontCare, skipping adding reputation.");
 				return;
 			}
 			var record = reputations.Find(r => r.force == force);
@@ -91,33 +76,35 @@ namespace Game {
 
 		public void FetchMail() {
 			if(fetched) {
-				Debug.LogWarning("A mail is already fetched. Skipping fetching.");
+				Prompt("A mail is already fetched. Skipping fetching.");
 				return;
 			}
 			if(!dispatched) {
 				DispatchMail();
 				if(!dispatched) {
-					Debug.LogWarning("No mail is dispatched, cannot fetch.");
+					Prompt("No mail is dispatched, cannot fetch.");
 					return;
 				}
 			}
 			fetched = dispatched;
 			dispatched = null;
-			HoldingEnvelope = true;
 
 			GameObject envelope = Instantiate(resources.envelopePrefab, elements.envelopeAnchor.transform);
-			StartCoroutine(HoldEnvelope(envelope.GetComponentInChildren<Envelope>()));
+			this.envelope = envelope.GetComponentInChildren<Envelope>();
+			this.envelope.target.sources.AddRange(elements.tools);
+			this.envelope.Sealing = fetched.sealing;
 
-			Debug.Log($"Fetched {fetched}");
+			Prompt($"Fetched {fetched}");
 		}
 		public void PostMail(Force force) {
 			if(!fetched) {
-				Debug.LogWarning("No mail is fetched, cannot post.");
+				Prompt("No mail is fetched, cannot post.");
 				return;
 			}
 			fetched = null;
-			HoldingEnvelope = false;
-			Debug.Log($"Posted mail to {force}");
+			Destroy(envelope.gameObject);
+			envelope = null;
+			Prompt($"Posted mail to {force}");
 		}
 		public void PostMail(string forceName) => PostMail((Force)Enum.Parse(typeof(Force), forceName));
 
@@ -126,27 +113,40 @@ namespace Game {
 				return;
 			envelope.Open = true;
 			envelope.Sealing = SealingType.None;
+			Prompt("Cut open envelope.");
 		}
-
 		public void GlueEnvelope() {
 			if(!envelope)
 				return;
 			envelope.Open = false;
 			envelope.Sealing = SealingType.Glue;
+			Prompt("Glued envelope.");
 		}
-
 		public void WaxEnvelope() {
 			if(!envelope)
 				return;
 			envelope.Open = false;
 			envelope.Sealing = SealingType.Wax;
+			Prompt("Wax-sealed envelope.");
+		}
+
+		public void EnterUI() {
+			Protagonist.instance.Input = false;
+		}
+		public void QuitUI() {
+			Protagonist.instance.Input = true;
+		}
+		public void Inspect() {
+			if(envelope.Sealing == SealingType.None)
+				elements.letterUI.Show(fetched.content);
 		}
 
 		public bool HoldingTool {
 			set {
 				if(!envelope)
 					return;
-				envelope.holdable.Active = envelope.target.Active = !value;
+				envelope.target.Active = value;
+				envelope.instant.Active = !value;
 			}
 		}
 		#endregion

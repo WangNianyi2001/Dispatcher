@@ -113,10 +113,25 @@ namespace Game {
 			camera.tag = "MainCamera";
 			selector = GetComponentInChildren<CameraSelector>();
 
-			Cursor.lockState = CursorLockMode.Locked;
+			Input = true;
 		}
 
+		bool input = true;
+		public bool Input {
+			set {
+				if(input = value) {
+					Cursor.lockState = CursorLockMode.Locked;
+				}
+				else {
+					Cursor.lockState = CursorLockMode.None;
+				}
+				GetComponent<PlayerInput>().enabled = value;
+			}
+		}
 		void FixedUpdate() {
+			if(!input)
+				return;
+
 			Vector3 velocity = inputVelocity * movementSpeed * Time.fixedDeltaTime;
 			velocity = transform.localToWorldMatrix.MultiplyVector(velocity);
 			Move(velocity);

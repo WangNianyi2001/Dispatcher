@@ -3,7 +3,7 @@
 namespace Game {
 	public class Mailbox : MonoBehaviour {
 		public Force force;
-		public TargetElement element;
+		public InstantElement element;
 
 		void Start() {
 			if(force == Force.DontCare)
