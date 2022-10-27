@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -9,7 +10,7 @@ namespace Game {
 		public float maxDistance = 10;
 		public InputAction useInput;
 
-		List<Usable> lastSelected;
+		[NonSerialized] public List<Usable> lastSelected;
 
 		public void Use() {
 			foreach(Usable usable in lastSelected)
@@ -30,18 +31,18 @@ namespace Game {
 			if(camera == null)
 				return;
 			Ray ray = camera.ScreenPointToRay(new Vector2(camera.pixelWidth, camera.pixelHeight) / 2);
-			RaycastHit[] hits = Physics.RaycastAll(ray, maxDistance);
+			var hits = Physics.RaycastAll(ray, maxDistance);
 			var currentSelected = hits
 				.Select((RaycastHit hit) => hit.collider.GetComponent<Usable>())
 				.Where((Usable usable) => usable != null)
 				.ToList();
 			currentSelected.ForEach((Usable usable) => {
 				if(!lastSelected.Contains(usable))
-					usable.onSelect.Invoke(this);
+					usable.OnSelect(this);
 			});
 			lastSelected.ForEach((Usable usable) => {
 				if(!currentSelected.Contains(usable))
-					usable.onDeselect.Invoke(this);
+					usable.OnDeselect(this);
 			});
 			lastSelected = currentSelected;
 		}

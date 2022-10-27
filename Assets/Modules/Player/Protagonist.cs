@@ -58,12 +58,17 @@ namespace Game {
 		public LousyTransform original;
 
 		public void Interact(Element element) {
-			if(holding) {
-				Unhold();
-				return;
+			if(element is HoldableElement) {
+				if(holding) {
+					Unhold();
+				}
+				else Hold(element as HoldableElement);
 			}
-			if(element is HoldableElement)
-				Hold(element as HoldableElement);
+			else {
+				if(holding)
+					Unhold();
+				else element.interactable.OnInteract(this);
+			}
 		}
 
 		public void Hold(HoldableElement holdable) {
@@ -75,6 +80,7 @@ namespace Game {
 				rotation = holdable.transform.localRotation,
 			};
 			holding = holdable;
+			holding.holding = true;
 			holding.Active = false;
 			holding.transform.parent = holdAnchor;
 			holding.transform.localPosition = Vector3.zero;
@@ -84,6 +90,7 @@ namespace Game {
 		public void Unhold() {
 			if(!holding)
 				return;
+			holding.holding = false;
 			holding.transform.parent = original.parent;
 			holding.transform.localPosition = original.position;
 			holding.transform.localRotation = original.rotation;
@@ -92,19 +99,19 @@ namespace Game {
 		}
 
 		public void OnInteract() {
-			CameraSelector selector = GetComponentInChildren<CameraSelector>();
-			if(selector == null)
-				return;
 			selector.Use();
 		}
 		#endregion
 
 		#region Life cycle
+		[NonSerialized] public CameraSelector selector;
+
 		new void Start() {
 			base.Start();
 
 			camera = GetComponentInChildren<Camera>();
 			camera.tag = "MainCamera";
+			selector = GetComponentInChildren<CameraSelector>();
 
 			Cursor.lockState = CursorLockMode.Locked;
 		}

@@ -16,15 +16,8 @@ namespace Game {
 
 		public bool active = true;
 		public bool Active {
-			get {
-				return GetComponent<Interactable>().enabled;
-			}
-			set {
-				active = value;
-				interactable.enabled = active;
-				interactable.user.enabled = active;
-				canvas.enabled = active;
-			}
+			get => active;
+			set => interactable.enabled = active = value;
 		}
 
 		protected virtual void Start() {

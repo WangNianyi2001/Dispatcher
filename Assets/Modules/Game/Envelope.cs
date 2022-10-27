@@ -8,6 +8,9 @@ namespace Game {
 		[SerializeField] bool open;
 		[SerializeField] SealingType sealing;
 
+		public HoldableElement holdable;
+		public TargetElement target;
+
 		void UpdateAppearance() {
 			openModel.SetActive(open);
 			closeModel.SetActive(!open);

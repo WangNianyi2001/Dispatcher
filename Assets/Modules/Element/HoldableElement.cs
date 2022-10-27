@@ -1,9 +1,10 @@
 ﻿using NaughtyAttributes;
-using UnityEngine;
+using System;
+using System.Collections.Generic;
 
 namespace Game {
 	public class HoldableElement : Element {
-		[ReorderableList] public TargetElement[] targets;
+		[ReorderableList] public List<TargetElement> targets;
 
 		public TargetElementEvent onPlace;
 
@@ -13,8 +14,15 @@ namespace Game {
 			onPlace.Invoke(targetElement);
 		}
 
+		[NonSerialized] public bool holding = false;
+
 		public void Hold() {
 			Protagonist.instance.Interact(this);
+		}
+
+		public void Unhold() {
+			if(Protagonist.instance.holding == this)
+				Protagonist.instance.Unhold();
 		}
 	}
 }

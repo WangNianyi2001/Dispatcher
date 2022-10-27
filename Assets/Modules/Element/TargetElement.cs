@@ -26,7 +26,6 @@ namespace Game {
 		public void Deselect() {
 			selected = null;
 			canvas.gameObject.SetActive(false);
-
 		}
 
 		public void Interact() {
