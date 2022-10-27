@@ -121,6 +121,27 @@ namespace Game {
 		}
 		public void PostMail(string forceName) => PostMail((Force)Enum.Parse(typeof(Force), forceName));
 
+		public void CutOpenEnvelope() {
+			if(!envelope || envelope.Open == true)
+				return;
+			envelope.Open = true;
+			envelope.Sealing = SealingType.None;
+		}
+
+		public void GlueEnvelope() {
+			if(!envelope)
+				return;
+			envelope.Open = false;
+			envelope.Sealing = SealingType.Glue;
+		}
+
+		public void WaxEnvelope() {
+			if(!envelope)
+				return;
+			envelope.Open = false;
+			envelope.Sealing = SealingType.Wax;
+		}
+
 		public bool HoldingTool {
 			set {
 				if(!envelope)

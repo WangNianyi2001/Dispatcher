@@ -2057,6 +2057,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6568083841911518563, guid: a9c83748c8976d449a16a9c3b08a38b4,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568083841911518563, guid: a9c83748c8976d449a16a9c3b08a38b4,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568083841911518563, guid: a9c83748c8976d449a16a9c3b08a38b4,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1158216347}
+    - target: {fileID: 6568083841911518563, guid: a9c83748c8976d449a16a9c3b08a38b4,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568083841911518563, guid: a9c83748c8976d449a16a9c3b08a38b4,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CutOpenEnvelope
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568083841911518563, guid: a9c83748c8976d449a16a9c3b08a38b4,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8074285826798884106, guid: a9c83748c8976d449a16a9c3b08a38b4,
         type: 3}
       propertyPath: m_Name
@@ -2103,6 +2133,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6285839656512276328}
     m_Modifications:
+    - target: {fileID: 295899405912246458, guid: 0e04100090220f84ab19ce7f983db9ce,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 295899405912246458, guid: 0e04100090220f84ab19ce7f983db9ce,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 295899405912246458, guid: 0e04100090220f84ab19ce7f983db9ce,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1158216347}
+    - target: {fileID: 295899405912246458, guid: 0e04100090220f84ab19ce7f983db9ce,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 295899405912246458, guid: 0e04100090220f84ab19ce7f983db9ce,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: WaxEnvelope
+      objectReference: {fileID: 0}
+    - target: {fileID: 295899405912246458, guid: 0e04100090220f84ab19ce7f983db9ce,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5638065746615163242, guid: 0e04100090220f84ab19ce7f983db9ce,
         type: 3}
       propertyPath: m_RootOrder
@@ -2775,6 +2835,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6285839656512276328}
     m_Modifications:
+    - target: {fileID: 1334622153836181024, guid: 718305cb15e43da4ebf475d5691a3dda,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1334622153836181024, guid: 718305cb15e43da4ebf475d5691a3dda,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1334622153836181024, guid: 718305cb15e43da4ebf475d5691a3dda,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1158216347}
+    - target: {fileID: 1334622153836181024, guid: 718305cb15e43da4ebf475d5691a3dda,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1334622153836181024, guid: 718305cb15e43da4ebf475d5691a3dda,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GlueEnvelope
+      objectReference: {fileID: 0}
+    - target: {fileID: 1334622153836181024, guid: 718305cb15e43da4ebf475d5691a3dda,
+        type: 3}
+      propertyPath: onPlace.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7117393599483315143, guid: 718305cb15e43da4ebf475d5691a3dda,
         type: 3}
       propertyPath: m_Name
