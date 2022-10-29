@@ -17,7 +17,6 @@ namespace Game {
 			if(pair == null)
 				return;
 			pair.text.text = $"{Constant.forceNames[force]}：{value}";
-			Debug.Log(pair.text.text);
 		}
 	}
 }

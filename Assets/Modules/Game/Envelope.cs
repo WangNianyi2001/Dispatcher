@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace Game {
 	public class Envelope : MonoBehaviour {
@@ -7,6 +8,11 @@ namespace Game {
 
 		[SerializeField] bool open;
 		[SerializeField] SealingType sealing;
+		public static Dictionary<SealingType, string> sealingPrompt = new Dictionary<SealingType, string> {
+			{ SealingType.None, "阅读信件" },
+			{ SealingType.Glue, "已胶封" },
+			{ SealingType.Wax, "已蜡封" },
+		};
 
 		public InstantElement instant;
 		public TargetElement target;
@@ -15,6 +21,7 @@ namespace Game {
 			openModel.SetActive(open);
 			closeModel.SetActive(!open);
 			wax.SetActive(!open && sealing == SealingType.Wax);
+			instant.LabelText = sealingPrompt[sealing];
 		}
 		public bool Open {
 			get => open;
@@ -27,7 +34,7 @@ namespace Game {
 			get => sealing;
 			set {
 				sealing = value;
-				UpdateAppearance();
+				Open = sealing == SealingType.None;
 			}
 		}
 

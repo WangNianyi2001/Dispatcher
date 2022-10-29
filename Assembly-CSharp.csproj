@@ -694,10 +694,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime.csproj">
-      <Project>{E3DF7468-F403-AF07-D47A-F1EC97A0A964}</Project>
-      <Name>Unity.RenderPipelines.HighDefinition.Config.Runtime</Name>
-    </ProjectReference>
     <ProjectReference Include="NaughtyAttributes.Editor.csproj">
       <Project>{F06684F4-08B3-1291-9AEE-35A247E1E007}</Project>
       <Name>NaughtyAttributes.Editor</Name>
@@ -705,6 +701,10 @@
     <ProjectReference Include="NaughtyAttributes.Core.csproj">
       <Project>{73DE05C3-6706-28C4-4B67-D5C2499CAF9B}</Project>
       <Name>NaughtyAttributes.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime.csproj">
+      <Project>{E3DF7468-F403-AF07-D47A-F1EC97A0A964}</Project>
+      <Name>Unity.RenderPipelines.HighDefinition.Config.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

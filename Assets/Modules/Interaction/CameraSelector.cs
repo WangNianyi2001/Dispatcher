@@ -13,8 +13,10 @@ namespace Game {
 		[NonSerialized] public List<Usable> lastSelected;
 
 		public void Use() {
-			foreach(Usable usable in lastSelected)
-				usable.BroadcastMessage("OnUse", this, SendMessageOptions.DontRequireReceiver);
+			foreach(Usable usable in lastSelected) {
+				if(usable.isActiveAndEnabled)
+					usable.BroadcastMessage("OnUse", this, SendMessageOptions.DontRequireReceiver);
+			}
 		}
 
 		public void Start() {

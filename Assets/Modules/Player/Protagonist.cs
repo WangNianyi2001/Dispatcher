@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -85,6 +86,12 @@ namespace Game {
 			holding.transform.parent = holdAnchor;
 			holding.transform.localPosition = Vector3.zero;
 			holding.transform.localRotation = original.rotation;
+			GameManager.instance.HoldingTool = true;
+		}
+
+		IEnumerator FuckUnhold() {
+			yield return new WaitForEndOfFrame();
+			GameManager.instance.HoldingTool = false;
 		}
 
 		public void Unhold() {
@@ -96,6 +103,7 @@ namespace Game {
 			holding.transform.localRotation = original.rotation;
 			holding.Active = true;
 			holding = null;
+			StartCoroutine(FuckUnhold());
 		}
 
 		public void OnInteract() {

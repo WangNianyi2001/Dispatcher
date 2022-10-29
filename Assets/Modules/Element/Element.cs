@@ -11,7 +11,7 @@ namespace Game {
 		public string labelText = "Element";
 		public string LabelText {
 			get => label.text;
-			set => labelText = label.text = value;
+			set => label.text = labelText = value;
 		}
 
 		public bool active = true;

@@ -60,6 +60,10 @@ namespace Game {
 		#endregion
 
 		#region Public interfaces
+		public void StartGame() {
+			elements.reputationUI.gameObject.SetActive(true);
+		}
+
 		public void Prompt(string msg) {
 			elements.promptUI.Text = msg;
 		}
@@ -159,6 +163,8 @@ namespace Game {
 			Protagonist.instance.Input = true;
 		}
 		public void Inspect() {
+			if(Protagonist.instance.holding)
+				return;
 			if(envelope.Sealing == SealingType.None)
 				elements.letterUI.Show(fetched.content);
 		}
@@ -192,6 +198,7 @@ namespace Game {
 				});
 			}
 			elements.mailBoxes = FindObjectsOfType<Mailbox>();
+			elements.promptUI.Quit();
 			elements.startupUI.Show();
 		}
 		#endregion
