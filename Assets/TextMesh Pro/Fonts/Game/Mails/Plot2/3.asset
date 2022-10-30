@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f75fd622ea09004ab39f18616b77b24, type: 3}
+  m_Name: 3
+  m_EditorClassIdentifier: 
+  from: 4
+  to: 2
+  sealing: 1
+  content: "\u5DE5\u4EBA\u670B\u53CB\u4EEC\uFF01\u4F60\u4EEC\u96BE\u9053\u8FD8\u8981\u7EE7\u7EED\u5FCD\u53D7\u90A3\u4E9B\u8D44\u672C\u5BB6\u7684\u7EDF\u6CBB\u5417\uFF01\r\n\u6211\u4EEC\u5DF2\u7ECF\u627F\u53D7\u8FD9\u79CD\u75DB\u82E6\u7684\u65E5\u5B50\u591F\u4E45\u4E86\uFF01\u4F60\u4EEC\u96BE\u9053\u8FD8\u8981\u7EE7\u7EED\u7ECF\u5386\u8FD9\u79CD\u5403\u4E0D\u9971\u7A7F\u4E0D\u6696\u7684\u751F\u6D3B\u5417\uFF01\u6743\u5229\u4E8E\u6211\u4EEC\u4E0E\u751F\u4FF1\u6765\uFF0C\u800C\u53CD\u6297\u7684\u65F6\u5019\u5230\u4E86\uFF01\r\n\u5DE5\u4EBA\u4E92\u52A9\u4F1A\r\n"
+  responsePairs:
+  - sendTo: 4
+    responses:
+    - effectOn: 4
+      reputation: 15
+  - sendTo: 3
+    responses:
+    - effectOn: 4
+      reputation: -15
+  - sendTo: 1
+    responses:
+    - effectOn: 4
+      reputation: -15
+  - sendTo: 2
+    responses:
+    - effectOn: 4
+      reputation: -15
+  hasConsequence: 0
+  consequence: 
+  end: 0
+  endingRemarks: 
+  successors: []
