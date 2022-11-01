@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60aee0ada4006146980e3006c6030de, type: 3}
+  m_Name: Mail Sequencer
+  m_EditorClassIdentifier: 
+  reputations:
+  - force: 1
+    reputation: 10
+  - force: 2
+    reputation: 10
+  - force: 3
+    reputation: 10
+  - force: 4
+    reputation: 10
+  generalMails:
+  - {fileID: 11400000, guid: e4bee8d7065f77945990f8b67cb1790e, type: 2}
+  - {fileID: 11400000, guid: d65b93126efbda540a441887f515237b, type: 2}
+  - {fileID: 11400000, guid: cc2990427e0fffe4986c0140d4d9be73, type: 2}
+  - {fileID: 11400000, guid: d4eb4ca433678814783b04d065f2fb48, type: 2}
+  - {fileID: 11400000, guid: c41b1bf0edffe554ebc89407a2396332, type: 2}
+  - {fileID: 11400000, guid: f05cf392bd33cbf46a8be47b977adbf1, type: 2}
+  - {fileID: 11400000, guid: f05cf392bd33cbf46a8be47b977adbf1, type: 2}
+  - {fileID: 11400000, guid: ddaf48e6e89b01b49b1409503a694cb0, type: 2}
+  - {fileID: 11400000, guid: 9477da2bda8c6824e987b6e6ae5e960d, type: 2}
+  plotEntries:
+  - {fileID: 11400000, guid: 2457ee9e7dfc2914cb8bac1e65516ecf, type: 2}
+  - {fileID: 11400000, guid: e3bb8f32f9614994589d396ffed81459, type: 2}
+  - {fileID: 11400000, guid: 8c1baa0cfcdb81142afa114ce35ea7ca, type: 2}
+  - {fileID: 11400000, guid: 86103d38c936eb54f864e76ea0eaf28f, type: 2}
+  goodEndings:
+  - force: 2
+    mail: {fileID: 11400000, guid: 9279b0b6cd94267459485643ab2195dc, type: 2}
+  - force: 3
+    mail: {fileID: 11400000, guid: 7b66787ae9660654882031b4302717b3, type: 2}
+  - force: 1
+    mail: {fileID: 11400000, guid: acac443ef249abf4cb1bdf844de98cd1, type: 2}
+  - force: 4
+    mail: {fileID: 11400000, guid: 8a8786c2ec24a7f4aaa9ed1aa3438f16, type: 2}

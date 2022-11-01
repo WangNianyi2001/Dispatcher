@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f7408f0d68301443a23f9cbc5f22ef3, type: 3}
+  m_Name: General2
+  m_EditorClassIdentifier: 
+  from: 0
+  to: 0
+  sealing: 0
+  content: "\u4E16\u754C\u4E00\u6D41\u753B\u5BB6\u6CE2\u666E-\u6CD5\u9686\u5148\u751F\u5373\u5C06\u5728\u4E0B\u5468\u516D\u5E02\u6C11\u827A\u672F\u4E2D\u5FC3\u4E3E\u529E\u5176\u4E16\u754C\u5DE1\u56DE\u753B\u5C55\u7684\u7B2C\u4E09\u7AD9\uFF01\r\n\u4F5C\u4E3A\u827A\u672F\u9886\u57DF\u7684\u5927\u62FF\uFF0C\u53E4\u5178\u4E3B\u4E49\u7ED8\u753B\u7684\u7EE7\u627F\u4EBA\uFF0C\u6CE2\u666E\u5148\u751F\u5C06\u4F1A\u5728\u672C\u6B21\u753B\u5C55\u4E0A\u516C\u5F00\u8D85\u8D8A\u4EE5\u5F80\u7684\u98CE\u683C\u7684\u65B0\u5F0F\u7ED8\u753B\uFF01\r\n\u8FD9\u5C06\u662F\u827A\u672F\u9886\u57DF\u7684\u53C8\u4E00\u6B21\u5927\u80C6\u63A2\u7D22\uFF01\r\n\u672C\u6B21\u5C55\u89C8\u5C06\u6301\u7EED\u5230\u4E0B\u4E2A\u6708\u7684\u7B2C\u4E00\u4E2A\u5468\u516D\uFF0C\u6301\u6709\u672C\u5BA3\u4F20\u5355\u524D\u5F80\u5E02\u6C11\u827A\u672F\u4E2D\u5FC3\u8D2D\u7968\u7684\u987E\u5BA2\u53EF\u4EAB\u53D7\u4E5D\u6298\u4F18\u60E0\uFF01\r\n\u65E9\u9E1F\u7968\uFF1A899\r\n\u73B0\u573A\u7968\uFF1A1099\r"
+  responsePairs:
+  - sendTo: 3
+    responses:
+    - effectOn: 3
+      reputation: 15
+  - sendTo: 2
+    responses:
+    - effectOn: 2
+      reputation: 15
+  - sendTo: 4
+    responses:
+    - effectOn: 4
+      reputation: -15
+  - sendTo: 1
+    responses:
+    - effectOn: 1
+      reputation: -15
