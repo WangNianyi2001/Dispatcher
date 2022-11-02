@@ -62,6 +62,7 @@ namespace Game {
 		#region Public interfaces
 		public void StartGame() {
 			elements.reputationUI.gameObject.SetActive(true);
+			elements.promptUI.gameObject.SetActive(true);
 		}
 
 		public void Prompt(string msg) {
